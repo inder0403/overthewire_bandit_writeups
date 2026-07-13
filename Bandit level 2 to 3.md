@@ -12,4 +12,12 @@
    ssh bandit2@bandit.labs.overthewire.org -p 2220
 2. **List the directory content to verify the filename:**
 `ls`
-*Output:* `spaces in the filename`
+
+   **Output:** `spaces in the filename.`
+
+3. **Read the file using quotes as it contains spaces.**
+cat `"spaces in the filename".`
+
+   **Output:** `[HIDDEN_PASSWORD]`
+
+Now I can use this retrieved credential/password to log in to Level 3  
