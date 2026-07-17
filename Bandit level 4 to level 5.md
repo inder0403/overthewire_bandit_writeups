@@ -30,4 +30,34 @@ Change directories into the inhere folder and check what is inside.
 
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
 
+## Step 3: Find the Human-Readable File
+Use the file command combined with a wildcard (*) to check the file type of every single file in the directory at once.
+
+**Command:**
+
+`file ./*`
+
+**Output:**
+
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+
+## Step 4: Read the Target File
+Because the filename begins with a dash (-), simply running cat -file07 will cause Linux to interpret -file07 as a command option. To bypass this, specify the explicit relative path by putting ./ in front of it.
+
+**Command:**
+`cat ./-file07`
+
+**Output:**
+[Hidden_Password]- This password can be used to log in to Level 5
+
+
 
